@@ -1,0 +1,2 @@
+module StuHasDepsHelper
+end

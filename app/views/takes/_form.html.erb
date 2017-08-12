@@ -1,0 +1,28 @@
+<%= form_for(take) do |f| %>
+  <% if take.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(take.errors.count, "error") %> prohibited this take from being saved:</h2>
+
+      <ul>
+      <% take.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-control">
+  <div class="field">
+    <%= f.label :course_id %><br>
+
+    <%= f.text_field :course_id, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :studentt_id %>
+    <%= f.text_field :studentt_id, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

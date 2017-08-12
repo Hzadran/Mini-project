@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sess starting:</strong>
+  <%= @session.Sess_Starting %>
+</p>
+
+<p>
+  <strong>Sess ending:</strong>
+  <%= @session.Sess_ending %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

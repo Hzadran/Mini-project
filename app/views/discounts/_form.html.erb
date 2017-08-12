@@ -1,0 +1,27 @@
+<%= form_for(discount) do |f| %>
+  <% if discount.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(discount.errors.count, "error") %> prohibited this discount from being saved:</h2>
+
+      <ul>
+      <% discount.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-group">
+  <div class="field">
+    <%= f.label :Dis_Amount %>
+    <%= f.number_field :Dis_Amount, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Referenced_by %>
+    <%= f.text_field :Referenced_by, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

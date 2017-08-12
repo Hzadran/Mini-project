@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Dis_amount: 1
+  Referenced_by: MyString
+
+two:
+  Dis_amount: 1
+  Referenced_by: MyString

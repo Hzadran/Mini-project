@@ -1,0 +1,62 @@
+<%= form_for(studentt) do |f| %>
+  <% if studentt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(studentt.errors.count, "error") %> prohibited this studentt from being saved:</h2>
+
+      <ul>
+      <% studentt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-group">
+  <div class="field">
+    <%= f.label :st_name %>
+    <%= f.text_field :st_name, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :F_name %>
+    <%= f.text_field :F_name, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %>
+    <%= f.text_field :Address, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Gender %>
+    <%= f.text_field :Gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Cell %>
+    <%= f.text_field :Cell, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Local_domicail %>
+    <%= f.text_field :Local_domicail, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Nationality %>
+    <%= f.text_field :Nationality, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :CNIC %>
+    <%= f.text_field :CNIC, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :session_id %>
+    <%= f.text_field :session_id, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

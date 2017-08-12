@@ -1,0 +1,55 @@
+<%= form_for(paymentt) do |f| %>
+  <% if paymentt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paymentt.errors.count, "error") %> prohibited this paymentt from being saved:</h2>
+
+      <ul>
+      <% paymentt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-control">
+  <div class="field">
+    <%= f.label :Amount %>
+<br>
+    <%= f.number_field :Amount, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :discount_id %>
+(Enter discoutn id else enter 0)
+    <%= f.text_field :discount_id, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cheque_id %>
+(Enter cheque id else enter 0)
+    <%= f.text_field :cheque_id, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Total_fee %>
+    <%= f.number_field :Total_fee, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Remaining_fee %>
+    <%= f.number_field :Remaining_fee, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pay_date %>
+    <%= f.date_select :pay_date, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :studentt_id %>
+    <%= f.text_field :studentt_id, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

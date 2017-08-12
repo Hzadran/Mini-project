@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Amount: 1
+  discount: one
+  cheque: one
+  Total_fess: 1
+  R_fee: 1
+  pay_date: 2017-08-12
+  student: one
+
+two:
+  Amount: 1
+  discount: two
+  cheque: two
+  Total_fess: 1
+  R_fee: 1
+  pay_date: 2017-08-12
+  student: two

@@ -1,0 +1,28 @@
+<%= form_for(stu_has_dep) do |f| %>
+  <% if stu_has_dep.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stu_has_dep.errors.count, "error") %> prohibited this stu_has_dep from being saved:</h2>
+
+      <ul>
+      <% stu_has_dep.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-group">
+
+  <div class="field">
+    <%= f.label :department_id %>
+    <%= f.text_field :department_id, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :studentt_id %>
+    <%= f.text_field :studentt_id, class: "form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
